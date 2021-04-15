@@ -1,0 +1,13 @@
+//Header Section
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-main;
+}
+
+.logged-in {
+    display: flex;
+    align-items: center;
+}

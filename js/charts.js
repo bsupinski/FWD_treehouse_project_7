@@ -1,7 +1,10 @@
 let trafficCanvas = document.getElementById("traffic-chart");
 let dailyCanvas = document.getElementById("daily-chart");
+let mobileCanvas = document.getElementById("mobile-chart");
 
 //Chart inputs
+
+//Traffic chart variabes
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3","4-10", "11-17", "18-24", "25-31"],
     datasets: [{
@@ -11,28 +14,25 @@ let trafficData = {
     }]
 };
 
-//Traffic chart variabes
 let trafficOptions = {
     aspectRatio: 2.5,
     animation: {
-        duration:0
+        duration: 0
     },
-    scale: {
-        y: [{
-            ticks: {
-                beginAtZero: true
-            }
-        }]
+    scales: {
+        y: {
+            beginAtZero: true
+        }
     },
     plugins: {
         legend: {
             display: false
         }
     }
-};
 
+}
 
-
+// Daily Chart variables
 const dailyData = {
     labels: ["S", "M", "T", "W", "Th", "F", "Su"],
     datasets: [{
@@ -43,12 +43,12 @@ const dailyData = {
     }]
 };
 
-// Daily Chart variables
+
 const dailyOptions = {
     scale: {
-        y:[{
+        y:{
             beginAtZero: true
-        }]
+        }
     },
     plugins: {
         legend: {
@@ -56,6 +56,31 @@ const dailyOptions = {
         }
     }
 };
+
+const mobileData = {
+    labels: ["Desktop", "Tablet", "Phones"],
+    datasets: [{
+        data: [2000, 550, 500],
+        backgroundColor: [
+            "#7477BF",
+            "#78CF82",
+            "#51B6C8"
+        ]
+    }]
+};
+
+const mobileOptions= {
+    plugins: {
+        legend: {
+            position: "right",
+            labels: {
+                boxWidth: 20,
+                fontStyle: "bold"
+            }
+        }
+    }
+};
+
 
 
 //Charts
@@ -69,4 +94,10 @@ let dailyChart = new Chart(dailyCanvas,{
     type: 'bar',
     data: dailyData,
     options: dailyOptions
-})
+});
+
+let mobileChart = new Chart(mobileCanvas, {
+    type: "doughnut",
+    data: mobileData,
+    options: mobileOptions
+});
