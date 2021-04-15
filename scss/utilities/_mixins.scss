@@ -5,13 +5,11 @@
     @if $value == null {
         @error "#{$break} is not a valid media-query name";
     }
-
     @else if $value == $mobile {
         @media(max-width: $value){
             @content;
         }
     }
-    
     @else {
         @media(min-width: $value){
             @content;
