@@ -7,9 +7,14 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: $color-main;
+    & h1, 
+    h2 {
+        color: white;
+        padding: 0 15px;
+    }
 }
 
 .logged-in {

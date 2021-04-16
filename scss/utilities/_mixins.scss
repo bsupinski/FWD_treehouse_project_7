@@ -3,7 +3,7 @@
     $mobile: map-get($breakpoint, 'mobile');
 
     @if $value == null {
-        @error "#{$break} is not a valid media-query name";
+        @error "#{$value} is not a valid media-query name";
     }
     @else if $value == $mobile {
         @media(max-width: $value){
