@@ -1,3 +1,6 @@
+svg{
+    box-sizing: content-box;
+}
 
 .bell{
     width: 20px;
@@ -9,4 +12,12 @@
     width: 25px;
     fill: white;
     stroke: white;
+}
+
+.socials svg{
+    width: 45px;
+    fill: white;
+    stroke: 2px $color-main;
+    background-color: $color-main; 
+    padding: 25px;
 }

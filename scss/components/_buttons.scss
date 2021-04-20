@@ -1,0 +1,21 @@
+.button-primary,
+    .button-disabled{
+        height: 35px;
+        color: white;
+        ;
+        border-radius: 7px;
+        border: 1px solid gray;
+    }
+
+    .button-primary {
+        background-color: $color-main;
+    }
+
+    .button-disabled {
+        background-color: gray;
+
+    }
+
+    .settings-buttons button{
+        width: 40%;
+    }

@@ -8,7 +8,7 @@ body {
 //Header Section
 .header {
     width: 100%;
-    height: 50px;
+    height: 55px;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -47,13 +47,14 @@ body {
     width: 4px;
     height: 4px;
     position: absolute;
-    right: 14px;
-    top: -1px;
+    top: -6px;
+    left: 15px;
     // display: none;
 }
 
 .transition-wrap
 {
+    position: relative;
     transition: 500ms ease-in-out;
 }
 

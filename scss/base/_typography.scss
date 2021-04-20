@@ -2,6 +2,23 @@ header h1 {
     font-size: 1.3em;
 }
 
-header h2{
+header h2 {
  font-size: .75em;   
 }
+
+.dashboard h2{
+    font-size: 1em;
+}
+
+.alert {
+    font-size: .80em;
+}
+
+.social-text p:nth-child(1){
+    color: $color-main;
+    font-size: 1.5em;
+}
+.social-text p:nth-child(2){
+    font-size: 3em;
+}
+

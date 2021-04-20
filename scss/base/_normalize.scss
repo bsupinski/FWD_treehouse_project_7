@@ -3,15 +3,40 @@
 /* Document
    ========================================================================== */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+ a {
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
+  
   
   /* Sections
      ========================================================================== */

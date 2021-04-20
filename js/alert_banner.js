@@ -6,11 +6,12 @@ alertBanner.innerHTML =
 <p><strong>You have</strong> overdue tasks to complete</p>
 <p class = "alert-banner-close">X</p>
 </div>
-`
+`;
 
-alertBanner.addEventListener('clicl', e=>{
+
+alertBanner.addEventListener('click', e=>{
     const element = e.target;
     if (element.classList.contains("alert-banner-close")){
-        alert.style.display="none"
+        alertBanner.style.display="none"
     }
 })
