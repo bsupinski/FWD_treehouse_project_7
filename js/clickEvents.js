@@ -4,36 +4,33 @@ trafficBar.forEach(navItem => {
     navItem.addEventListener("click", function(){
         trafficBar.forEach(nav => nav.classList.remove('active'));
         this.classList.add('active');
-
-        // if(this === trafficbar[0]){
-        //     let trafficChart = new Chart(trafficCanvas, {
-        //         type: 'line',
-        //         data: trafficDataHourly,
-        //         options: trafficOptions
-        //     });
-        // }
-        // else if(this === trafficBar[1]){
-        //     let trafficChart = new Chart(trafficCanvas, {
-        //         type: 'line',
-        //         data: trafficDataDaily,
-        //         options: trafficOptions
-        //     });
-        // }
-
-        // else if(this === trafficBar[2]){
-        //     let trafficChart = new Chart(trafficCanvas, {
-        //         type: 'line',
-        //         data: trafficDataWeekly,
-        //         options: trafficOptions
-        //     });
-        // }
-
-        // else if(this === trafficBar[3]){
-        //     let trafficChart = new Chart(trafficCanvas, {
-        //         type: 'line',
-        //         data: trafficDataMonthly,
-        //         options: trafficOptions
-        //     });
-        // }
+        if (navItem.textContent === "Hourly" ){
+            const updateChart = (trafficChart, hourlyTrafficData) => {
+                trafficChart.data.datasets[0].data = dailyTrafficData.datasets[0].data;
+                trafficChart.update();
+              };
+        }
+        else if (navItem.textContent === "Daily" ){
+            const updateChart = (trafficChart, dailyTrafficData) => {
+                trafficChart.data.datasets[0].data = dailyDataHourly.datasets[0].data;
+                trafficChart.update();
+              };
+            
+        }
+        else if (navItem.textContent === "Weekly" ){
+            const updateChart = (trafficChart, weeklyTrafficData) => {
+                trafficChart.data.datasets[0].data = weeklyDataHourly.datasets[0].data;
+                trafficChart.update();
+              };
+            
+        }
+        else if (navItem.textContent === "Monthly" ){
+            const updateChart = (trafficChart, monthlyTrafficData) => {
+                trafficChart.data.datasets[0].data = trafficDataHourly.datasets[0].data;
+                trafficChart.update();
+              };  
+        }
     });
 });
+
+
