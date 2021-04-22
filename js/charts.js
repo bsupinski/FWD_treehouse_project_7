@@ -5,10 +5,37 @@ let mobileCanvas = document.getElementById("mobile-chart");
 //Chart inputs
 
 //Traffic chart variabes
-let trafficData = {
+let trafficDataHourly = {
     labels: ["13-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3","4-10", "11-17", "18-24", "25-31"],
     datasets: [{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
+        backgroundColor: "rgba(116, 119, 191, .3)",
+        borderWidth: 1
+    }]
+};
+
+let trafficDataDaily = {
+    labels: ["13-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3","4-10", "11-17", "18-24", "25-31"],
+    datasets: [{
+        data: [1200, 1650, 1300, 8000, 1900, 2150, 1950, 2650, 3150, 1900, 3000],
+        backgroundColor: "rgba(116, 119, 191, .3)",
+        borderWidth: 1
+    }]
+};
+
+let trafficDataWeekly = {
+    labels: ["13-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3","4-10", "11-17", "18-24", "25-31"],
+    datasets: [{
+        data: [1900, 3200, 3000, 4000, 5000, 3450, 2450, 3650, 4550, 3000, 5000],
+        backgroundColor: "rgba(116, 119, 191, .3)",
+        borderWidth: 1
+    }]
+};
+
+let trafficDataMonthly = {
+    labels: ["13-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3","4-10", "11-17", "18-24", "25-31"],
+    datasets: [{
+        data: [1750, 11250, 11000, 1000, 11500, 11750, 11250, 11850, 12250, 1500, 12500],
         backgroundColor: "rgba(116, 119, 191, .3)",
         borderWidth: 1
     }]
@@ -86,7 +113,7 @@ const mobileOptions= {
 //Charts
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficData,
+    data: trafficDataHourly,
     options: trafficOptions
 });
 
@@ -101,3 +128,4 @@ let mobileChart = new Chart(mobileCanvas, {
     data: mobileData,
     options: mobileOptions
 });
+

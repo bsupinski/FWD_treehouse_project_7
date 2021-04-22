@@ -66,6 +66,7 @@ section{
 .traffic-nav-link{
     padding: 7px 12px;
     border-radius: 15px;
+    cursor: pointer;
     
 }
 
@@ -88,8 +89,14 @@ section{
 }
 
 .soical-image{
+    display: flex;
+    height: 95px;
+    width: 95px;
     margin-left: 15px;
+    background-color: $color-main;
+    border-radius: 50%;
 }
+
 
 .social-text {
     display: flex;

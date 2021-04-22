@@ -408,9 +408,7 @@ svg {
 .socials svg {
   width: 45px;
   fill: white;
-  stroke: 2px #7477bf;
-  background-color: #7477bf;
-  padding: 25px;
+  margin: auto;
 }
 
 body {
@@ -573,6 +571,7 @@ section {
 .traffic-nav-link {
   padding: 7px 12px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .active {
@@ -593,7 +592,12 @@ section {
 }
 
 .soical-image {
+  display: flex;
+  height: 95px;
+  width: 95px;
   margin-left: 15px;
+  background-color: #7477bf;
+  border-radius: 50%;
 }
 
 .social-text {
