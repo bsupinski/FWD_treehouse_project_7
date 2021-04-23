@@ -5,5 +5,8 @@
 
 .widget-container-half{
     width: 95vw;
-    margin: auto;  
+    margin: auto;
+    @include media-q('small sc'){
+        width: 45vw;
+    } 
 }

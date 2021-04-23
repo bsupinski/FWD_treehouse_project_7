@@ -387,6 +387,7 @@ header h2 {
 
 .social-text p:nth-child(2) {
   font-size: 3em;
+  color: #999;
 }
 
 svg {
@@ -395,19 +396,19 @@ svg {
 
 .bell {
   width: 20px;
-  stroke: white;
-  fill: white;
+  stroke: #fff;
+  fill: #fff;
 }
 
 .nav-icons svg {
   width: 25px;
-  fill: white;
-  stroke: white;
+  fill: #fff;
+  stroke: #fff;
 }
 
 .socials svg {
   width: 45px;
-  fill: white;
+  fill: #fff;
   margin: auto;
 }
 
@@ -427,7 +428,7 @@ body {
 }
 .header h1,
 .header h2 {
-  color: white;
+  color: #fff;
   padding: 0 15px;
 }
 .header h1 {
@@ -447,7 +448,7 @@ body {
   justify-content: center;
   padding: 3px 16px 3px 0;
   margin-right: 10px;
-  border-right: 0.1px solid lightgrey;
+  border-right: 0.1px solid #cccccc;
 }
 
 #notifications {
@@ -519,20 +520,21 @@ section {
   padding: 10px;
 }
 
-.dashboard {
-  display: flex;
-  justify-content: space-between;
-}
-
 .main h2, h3 {
   padding: 10px 0 10px 12px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .dashboard-search input {
   height: 50px;
   outline: none;
-  background-color: lightgray;
-  border-color: grey;
+  background-color: #f7f7f7;
+  border: 1px solid #cccccc;
   border-top: none;
   border-right: none;
 }
@@ -555,7 +557,7 @@ section {
 }
 
 section {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #cccccc;
 }
 
 .traffic-options {
@@ -576,15 +578,15 @@ section {
 
 .active {
   background-color: #81c98f;
-  color: white;
+  color: #fff;
 }
 
 .social-card {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: lightgrey;
-  border: 1px solid darkgray;
+  background-color: #f7f7f7;
+  border: 1px solid #cccccc;
   border-radius: 10px;
   width: 90%;
   margin: 5px auto 15px auto;
@@ -620,7 +622,7 @@ section {
   margin: 10px auto;
 }
 .members-container:nth-of-type(n+2) {
-  border-top: 2px solid black;
+  border-top: 2px solid #cccccc;
 }
 
 .widget-container,
@@ -639,13 +641,13 @@ section {
 .form-area {
   width: 100%;
   padding: 5px 10px;
-  background-color: lightgray;
-  border-color: gray;
+  background-color: #f7f7f7;
+  border: 1px solid #cccccc;
   border-radius: 5px;
 }
 .form-field::placeholder,
 .form-area::placeholder {
-  color: blue;
+  color: #cccccc;
 }
 
 .form-field {
@@ -681,6 +683,12 @@ section {
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas: "header" "navigation" "main";
+}
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas: "header header" "navigation main";
+  }
 }
 
 .header {
@@ -731,13 +739,18 @@ section {
   width: 95vw;
   margin: auto;
 }
+@media (min-width: 768px) {
+  .widget-container-half {
+    width: 45vw;
+  }
+}
 
 .button-primary,
 .button-disabled {
   height: 35px;
-  color: white;
+  color: #fff;
   border-radius: 7px;
-  border: 1px solid gray;
+  border: 1px solid #cccccc;
 }
 
 .button-primary {
@@ -745,7 +758,7 @@ section {
 }
 
 .button-disabled {
-  background-color: gray;
+  background-color: #999;
 }
 
 .settings-buttons button {

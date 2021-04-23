@@ -17,7 +17,7 @@ body {
     background-color: $color-main;
     & h1, 
     h2 {
-        color: white;
+        color: $color-white;
         padding: 0 15px;
     }
     & h1{
@@ -38,7 +38,7 @@ body {
     justify-content: center;
     padding: 3px 16px 3px 0;
     margin-right: 10px;
-    border-right: .1px solid lightgrey;
+    border-right: .1px solid $color-grayborder;
 }
 
 #notifications {

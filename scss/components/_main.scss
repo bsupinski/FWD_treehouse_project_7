@@ -8,21 +8,22 @@ section {
     padding: 10px;
 }
 
-//Dashboard main
-.dashboard {
-    display: flex;
-    justify-content: space-between;
-}
-
 .main h2, h3{
     padding: 10px 0 10px 12px;
 }
 
+
+//Dashboard
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 .dashboard-search input{
     height: 50px;
     outline: none;
-    background-color: lightgray;
-    border-color: grey;
+    background-color: $color-grayfill;
+    border: 1px solid $color-grayborder;
     border-top: none;
     border-right: none;
 }
@@ -48,7 +49,7 @@ section {
 
 //Base Secrtion CSS
 section{
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $color-grayborder;
 
 }
 
@@ -72,7 +73,7 @@ section{
 
 .active{
     background-color: $color-highlight;
-    color: white;
+    color: $color-white;
 }
 
 //Social main
@@ -80,8 +81,8 @@ section{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: lightgrey;
-    border: 1px solid darkgray;
+    background-color: $color-grayfill;
+    border: 1px solid $color-grayborder;
     border-radius: 10px;
     width: 90%;
     margin: 5px auto 15px auto;
@@ -118,7 +119,7 @@ section{
     max-width: 90%;
     margin: 10px auto;
     &:nth-of-type(n+2){
-        border-top: 2px solid black;
+        border-top: 2px solid $color-grayborder;
     }
 }
 
@@ -136,11 +137,11 @@ section{
     .form-area {
         width: 100%;
         padding: 5px 10px;
-        background-color: lightgray;
-        border-color: gray;
+        background-color: $color-grayfill;
+        border:1px solid $color-grayborder;
         border-radius: 5px;
         &::placeholder{
-            color: blue;
+            color: $color-grayborder;
         }
     }
 

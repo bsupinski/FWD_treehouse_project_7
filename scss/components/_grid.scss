@@ -9,13 +9,13 @@
     "header"
     "navigation"
     "main";
-    // @include media-q('small sc'){
-    //     grid-template-columns: 55px 1fr;
-    //     grid-template-areas: 
-    //     "header header"
-    //     "navigation main"
-    //     ;
-    // }   
+    @include media-q('small sc'){
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: 
+        "header header"
+        "navigation main"
+        ;
+    }   
 }
 
 .header{
