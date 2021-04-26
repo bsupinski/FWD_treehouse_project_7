@@ -520,14 +520,13 @@ section {
   padding: 10px;
 }
 
-.main h2, h3 {
-  padding: 10px 0 10px 12px;
+.main h2, h3, h4, h5 {
+  margin: 10px 0 10px 12px;
 }
 
 .dashboard {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  justify-content: space-between;
 }
 
 .dashboard-search input {
@@ -632,10 +631,6 @@ section {
   width: 90%;
   margin: auto;
 }
-.widget-container *,
-.settings * {
-  margin-bottom: 15px;
-}
 
 .form-field,
 .form-area {
@@ -656,6 +651,45 @@ section {
 
 .form-area {
   height: 150px;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input[type=checkbox] {
+  position: relative;
+  height: 30px;
+  width: 80px;
+  appearance: none;
+  background-color: #7477bf;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+
+input:checked[type=checkbox] {
+  background-color: #cccccc;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 27px;
+  height: 27px;
+  outline: none;
+  border-radius: 45px;
+  background-color: #cccccc;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+input:checked[type=checkbox]:before {
+  left: 52px;
+  background-color: #7477bf;
 }
 
 .settings-buttons {

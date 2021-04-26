@@ -8,17 +8,18 @@ section {
     padding: 10px;
 }
 
-.main h2, h3{
-    padding: 10px 0 10px 12px;
+.main h2, h3, h4, h5{
+    margin: 10px 0 10px 12px;
 }
 
 
 //Dashboard
 .dashboard{
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    justify-content: space-between;
+
 }
+
 .dashboard-search input{
     height: 50px;
     outline: none;
@@ -129,32 +130,75 @@ section{
     flex-direction: column;
     width: 90%;
     margin: auto;
-    & *{
-        margin-bottom: 15px;
+   
+}
+.form-field,
+.form-area {
+    width: 100%;
+    padding: 5px 10px;
+    background-color: $color-grayfill;
+    border:1px solid $color-grayborder;
+    border-radius: 5px;
+    &::placeholder{
+        color: $color-grayborder;
     }
 }
-    .form-field,
-    .form-area {
-        width: 100%;
-        padding: 5px 10px;
-        background-color: $color-grayfill;
-        border:1px solid $color-grayborder;
-        border-radius: 5px;
-        &::placeholder{
-            color: $color-grayborder;
-        }
-    }
 
-    .form-field {
-        height: 40px;
-    }
+.form-field {
+    height: 40px;
+}
 
-    .form-area {
-        height: 150px
-    }
+.form-area {
+    height: 150px
+}
 
-    .settings-buttons{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+
+//Toggle Switch options
+.toggle{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    height: 30px;
+    width: 80px;
+    appearance: none;
+    background-color: $color-main;
+    border-radius: 24px;
+    transition: .3s;
+}
+
+input:checked[type="checkbox"]{
+    background-color: $color-grayborder;
+}
+
+input[type="checkbox"]::before{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 27px;
+    height: 27px;
+    outline: none;
+    border-radius: 45px;
+    background-color: $color-grayborder;
+    transform:scale(1.1);
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]:before{
+    left: 52px;
+    background-color: $color-main;
+
+}
+
+
+//Settings Buttons
+.settings-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
