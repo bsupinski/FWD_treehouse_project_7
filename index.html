@@ -8,7 +8,7 @@
     <title>Dashboard Web App</title>
 </head>
 <body class="grid-container">
-    <header class="header">
+    <header class="header" id="home">
         <h1><strong>web</strong>App &trade;</h1>
         <div class="right-side">
                 <div class="notifcation">
@@ -60,7 +60,7 @@
         <div class="alert" id="alert">
             <!--Js will insert Alert here-->
         </div>
-        <section class= "traffic">
+        <section class= "traffic" id="charts">
             <h3>TRAFFIC</h3>
             <ul class = "traffic-options">
                 <li class="traffic-nav-link active">Hourly</li>
@@ -125,7 +125,7 @@
             </div>
 
         </section>
-        <section class="new-members">
+        <section class="new-members" id="members">
             <h3>NEW MEMBERS</h3>
             <div class="members-container">
                 <img src="images/member-1.jpg" alt="image of member 1">
@@ -173,13 +173,19 @@
                 <button class = "button-primary" id= "send">Send</button>
             </form>
         </section>
-        <section class = "settings">
+        <section class = "settings" id="settings">
             <h3>SETTINGS</h3>
             <!--custom CSS toggle code-->
-            <div class="toggles">
-                <input type="checkbox">
+            <div class="user-option">
+                <div class="toggles">
+                    <h4>Send Email Notifications</h4>
+                    <input type="checkbox">
+                </div>
+                <div class="toggles">
+                    <h4>Set Profile to Public</h4>
+                    <input type="checkbox">
+                </div>
             </div>
-
             <select class="form-field" id="timezone">
                 <option disabled selected> Select a Timezone</option>
                 <option value="">Eastener</option>
