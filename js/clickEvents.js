@@ -1,3 +1,4 @@
+//Traffic Options
 trafficBar = document.querySelectorAll(".traffic-nav-link");
 const updateChart = (chart, newData) => {
     chart.data.labels = newData.labels;

@@ -25,16 +25,16 @@ let trafficDataHourly = {
 };
 
 let trafficDataDaily = {
-    labels: ["13-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3","4-10", "11-17", "18-24", "25-31"],
+    labels: ["Sun", "Mon", "Tues", "Wedn", "Thurs", "Fri", "Sat",],
     datasets: [{
-        data: [1200, 1650, 1300, 8000, 1900, 2150, 1950, 2650, 3150, 1900, 3000],
+        data: [1200, 1650, 1300, 8000, 1900, 2150, 1950],
         backgroundColor: "rgba(116, 119, 191, .3)",
         borderWidth: 1
     }]
 };
 
 let trafficDataWeekly = {
-    labels: ["13-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3","4-10", "11-17", "18-24", "25-31"],
+    labels: ["Jan 1st", "Jan 7th", "Jan 14th", "Jan 21st", "Jan 28th", "Feb 4th", "Feb 11th", "Feb 18th", "Feb 25th", "March 4th", "Feb 11th"],
     datasets: [{
         data: [1900, 3200, 3000, 4000, 5000, 3450, 2450, 3650, 4550, 3000, 5000],
         backgroundColor: "rgba(116, 119, 191, .3)",
@@ -43,9 +43,9 @@ let trafficDataWeekly = {
 };
 
 let trafficDataMonthly = {
-    labels: ["13-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3","4-10", "11-17", "18-24", "25-31"],
+    labels: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
     datasets: [{
-        data: [1750, 11250, 11000, 1000, 11500, 11750, 11250, 11850, 12250, 1500, 12500],
+        data: [1750, 11250, 11000, 1000, 11500, 11750, 11250, 11850, 12250, 1500, 12500, 5000],
         backgroundColor: "rgba(116, 119, 191, .3)",
         borderWidth: 1
     }]
