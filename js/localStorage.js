@@ -1,42 +1,21 @@
-const save = document.getElementById("save");
-const cancel = document.getElementById("cancel");
-const email = document.getElementById('emailToggle');
-const public = document.getElementById('publicToggle');
-const timeZone = document.getElementById('timeZone');
+saveButton = document.getElementById('save');
+emailToggle = document.getElementById('emailToggle');
 
-let emailCheckbox = localStorage.getItem('emailToggle');
-let toggleCheckbox = localStorage.getItem('publicToggle');
-let timeZoneStorage = localStorage.getItem('savedTimeZone');
+localStorage.getItem("email");
+if("email" === "checked"){
+    emailToggle.checked = true;
+}else{
+    emailToggle.checked = false;
+};
 
-//reusable function for checkbox
-function checkBoxChecked(checkBox){
-    if( checkBox.checked === true){
-        localStorage.setItem(`${checkBox}`, checkBox.checked)
+
+saveButton.addEventListener('click', ()=>{
+    saveButton.style.backgroundColor="red";
+    if(emailToggle.checked){
+        localStorage.setItem("email", "checked");
     }else{
-        localStorage.setItem(`${checkBox}`, checkBox);
+        localStorage.setItem("email", "unchecked");
     }
-}
-//reusable function for selector
-// function selectSelection(selector){
-//     localStorage.setItem("saved timezone", selector.selectedIndex);
-// }
-
-//Save localstorage
-save.addEventListener("click", ()=> {
-    emailCheckbox = localStorage.getItem('emailToggle');
-    toggleCheckbox = localStorage.getItem('publicToggle');
-    timeZoneStorage = localStorage.getItem('publicToggle');
-    checkBoxChecked(emailToggle);
-    checkBoxChecked(publicToggle);
-    // selectSelection(timeZoneStorage);
+    console.log(localStorage);
 })
 
-//Clear localstorage
-cancel.addEventListener("click", ()=> {
-    emailCheckbox = localStorage.getItem('emailToggle');
-    toggleCheckbox = localStorage.getItem('publicToggle');
-    timeZoneStorage = localStorage.getItem('publicToggle');
-    localStorage.removeItem(emailCheckbox);
-    localStorage.removeItem(toggleCheckbox);
-
-})
