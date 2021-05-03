@@ -6,23 +6,20 @@ const timeZone = document.getElementById('timeZone');
 
 let emailCheckbox = localStorage.getItem('emailToggle');
 let toggleCheckbox = localStorage.getItem('publicToggle');
-let timeZoneStorage = localStorage.getItem('publicToggle');
+let timeZoneStorage = localStorage.getItem('savedTimeZone');
 
 //reusable function for checkbox
 function checkBoxChecked(checkBox){
     if( checkBox.checked === true){
-        console.log("checked");
-        localStorage.setItem(checkBox, "checked")
+        localStorage.setItem(`${checkBox}`, checkBox.checked)
     }else{
-        console.log("Not checked")
-        localStorage.setItem(checkBox, "unchecked")
+        localStorage.setItem(`${checkBox}`, checkBox);
     }
 }
 //reusable function for selector
-function selectSelection(selector){
-    selector.selectedIndex;
-    localStorage.setItem()
-}
+// function selectSelection(selector){
+//     localStorage.setItem("saved timezone", selector.selectedIndex);
+// }
 
 //Save localstorage
 save.addEventListener("click", ()=> {
@@ -31,7 +28,7 @@ save.addEventListener("click", ()=> {
     timeZoneStorage = localStorage.getItem('publicToggle');
     checkBoxChecked(emailToggle);
     checkBoxChecked(publicToggle);
-    console.log(selectSelection(timeZone));
+    // selectSelection(timeZoneStorage);
 })
 
 //Clear localstorage
