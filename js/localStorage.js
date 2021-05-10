@@ -1,21 +1,35 @@
-saveButton = document.getElementById('save');
-emailToggle = document.getElementById('emailToggle');
+let saveButton = document.getElementById('save');
+let emailToggle = document.getElementById('emailToggle')
+let publicToggle = document.getElementById('publicToggle');
+let timeZone = document.getElementById('timeZone');
 
-localStorage.getItem("email");
-if("email" === "checked"){
+// Receiving localStorage
+if(localStorage.getItem('email') === "checked"){
     emailToggle.checked = true;
-}else{
-    emailToggle.checked = false;
 };
 
+if(localStorage.getItem('public') === "checked"){
+    publicToggle.checked = true;
+};
+
+timeZone.selectedIndex = localStorage.getItem("userTimezone");
 
 saveButton.addEventListener('click', ()=>{
-    saveButton.style.backgroundColor="red";
+//Turning Send Email Notification on/off
     if(emailToggle.checked){
         localStorage.setItem("email", "checked");
     }else{
-        localStorage.setItem("email", "unchecked");
-    }
-    console.log(localStorage);
+        localStorage.setItem("email", "unchecked")
+    };
+//Turning Set Profile to Public on/off
+    if(publicToggle.checked){
+        localStorage.setItem("public", "checked")
+    }else{
+        localStorage.setItem("public", "unchecked")
+    };
+//Save Time zone selection
+    let selectedTimeZone = timeZone.selectedIndex;
+    localStorage.setItem("userTimezone", selectedTimeZone);
+    
 })
 

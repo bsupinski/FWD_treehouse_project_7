@@ -569,7 +569,10 @@ section {
   width: 70%;
 }
 
-.dashboard-search input {
+#myInput {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
   height: 50px;
   width: 100%;
   outline: none;
@@ -579,13 +582,27 @@ section {
   border-right: none;
 }
 
-.results ul li {
-  display: none;
+.autocomplete-items {
+  position: absolute;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  width: 70%;
+  max-width: relative;
+  overflow: hidden;
 }
 
-.show .results ul li {
-  opacity: 1;
-  display: block;
+.autocomplete-items div {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+}
+
+.autocomplete-items div:hover {
+  background-color: #7477bf;
+}
+
+.autocomplete-active {
+  background-color: #81c98f;
 }
 
 .alert {
