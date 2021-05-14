@@ -2,6 +2,7 @@ let saveButton = document.getElementById('save');
 let emailToggle = document.getElementById('emailToggle')
 let publicToggle = document.getElementById('publicToggle');
 let timeZone = document.getElementById('timeZone');
+let cancel = document.getElementById('cancel');
 
 // Receiving localStorage
 if(localStorage.getItem('email') === "checked"){
@@ -30,6 +31,8 @@ saveButton.addEventListener('click', ()=>{
 //Save Time zone selection
     let selectedTimeZone = timeZone.selectedIndex;
     localStorage.setItem("userTimezone", selectedTimeZone);
-    
 })
 
+cancel.addEventListener("click", e =>{
+    localStorage.clear();
+})

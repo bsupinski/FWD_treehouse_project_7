@@ -5,7 +5,7 @@ const send = document.getElementById("send");
 
 send.addEventListener("click",()=>{
    if(user.value == "" && message.value == ""){
-       alert("Please specify user you would like to message");
+       alert("Please fill out both forms to send a message");
        return false;
    }else if( user.value == ""){
        alert("Please specify what user you would like to send a message to.");

@@ -378,11 +378,13 @@ header h2 {
 
 .alert {
   font-size: 0.8em;
+  color: #fff;
 }
 
 .social-text p:nth-child(1) {
   color: #7477bf;
   font-size: 1.5em;
+  font-weight: 500;
 }
 
 .social-text p:nth-child(2) {
@@ -443,13 +445,14 @@ body {
   width: 180px;
 }
 
-.notifcation {
+.message-container {
   display: flex;
   position: relative;
   justify-content: center;
   padding: 3px 16px 3px 0;
   margin-right: 10px;
   border-right: 0.1px solid #cccccc;
+  cursor: pointer;
 }
 
 #notifications {
@@ -460,6 +463,32 @@ body {
   position: absolute;
   top: -6px;
   left: 15px;
+}
+
+.messages {
+  position: absolute;
+  display: none;
+  min-width: 300px;
+  top: 40px;
+  left: -130px;
+  z-index: 4;
+}
+
+.new-message {
+  display: flex;
+  justify-content: center;
+  background-color: #f7f7f7;
+  position: relative;
+  margin: 5px;
+  padding: 15px;
+  border: 4px solid #81c98f;
+  border-radius: 15px;
+}
+
+.close {
+  position: relative;
+  top: -15px;
+  left: 8px;
 }
 
 .transition-wrap {
@@ -691,6 +720,10 @@ section {
   border-top: 2px solid #cccccc;
 }
 
+.members-text a {
+  color: #7477bf;
+}
+
 .widget-container,
 .settings {
   display: flex;
@@ -726,6 +759,11 @@ section {
   margin-bottom: 15px;
 }
 
+label {
+  width: 95px;
+  height: 35px;
+}
+
 .toggles {
   display: flex;
   justify-content: space-between;
@@ -736,26 +774,26 @@ section {
 
 input[type=checkbox] {
   position: relative;
-  height: 30px;
-  width: 70px;
+  height: 35px;
+  width: 95px;
   appearance: none;
   box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
-  background-color: #7477bf;
+  background-color: #cccccc;
   border-radius: 24px;
   transition: 0.3s;
+  border: 3px solid #cccccc;
 }
 
 input:checked[type=checkbox] {
-  background-color: #cccccc;
+  background-color: #7477bf;
 }
 
 input[type=checkbox]::before {
   content: "";
   position: absolute;
-  top: 2px;
   left: 1px;
-  width: 18px;
-  height: 18px;
+  width: 21px;
+  height: 21px;
   outline: none;
   border-radius: 45px;
   background-color: #fff;
@@ -766,7 +804,7 @@ input[type=checkbox]::before {
 }
 
 input:checked[type=checkbox]:before {
-  left: 42px;
+  left: 59px;
   background-color: #fff;
   z-index: 2;
 }
@@ -778,15 +816,16 @@ input:checked[type=checkbox]:before {
 .on,
 .off {
   position: relative;
-  top: -10px;
+  top: -30px;
 }
 
 .on {
-  left: -33px;
+  left: 7px;
+  color: #fff;
 }
 
 .off {
-  left: -93px;
+  left: 37px;
 }
 
 .form-area,
