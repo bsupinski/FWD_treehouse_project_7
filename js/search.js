@@ -104,4 +104,4 @@ function autocomplete(inp, arr) {
   });
   }
 
-  autocomplete(document.getElementById("myInput"), searchable);
+  autocomplete(document.getElementById("userField"), searchable);

@@ -37,6 +37,7 @@
 
 @include media-q('small sc'){
     .dashboard,
+    .alert,
     .traffic,
     .social-stats{
         grid-column: 1 / span 2;
@@ -48,7 +49,7 @@
         grid-column: 1 / span 1;
     }
 
-    .mobile-usersm
+    .mobile-users,
     .recent-activity,
     .settings{
         grid-column: 2 / span 1;

@@ -7,6 +7,10 @@
 
 section {
     padding: 10px;
+    max-width: 100%;
+    @include media-q('small sc'){
+        padding: 0;
+    }
 }
 
 .main h2, h3, h4, h5{
@@ -14,101 +18,12 @@ section {
 }
 
 
-//Dashboard
-.dashboard{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.dashboard-search{
-    width: 70%;
-}
-
-#myInput{
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    height: 50px;
-    width: 100%;
-    outline: none;
-    background-color: $color-grayfill;
-    border: 1px solid $color-grayborder;
-    border-top: none;
-    border-right: none;
-}
-
-.autocomplete-items{
-    position: absolute;
-    background-color: $color-grayfill;
-    cursor: pointer;
-    width: 70%;
-    max-width: relative;
-    overflow: hidden;
-}
-
-.autocomplete-items div{
-    padding: 10px;
-    border: 1px solid $color-grayborder;
-    cursor: pointer;
-}
-.autocomplete-items div:hover{
-    background-color: $color-main;
-}
-
-.autocomplete-active {
-    background-color: $color-highlight;
-
-}
-
-//Alert main
-.alert{
-    margin: 15px auto 0 auto;
-    cursor: pointer;
-}
-
-.alert-banner {
-    width: 250px;
-    height: 40px;
-    border-radius: 10px;
-    margin: auto;
-    padding: 0 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: $color-main;
-    
-}
-
 //Base Secrtion CSS
 section{
     border-bottom: 1px solid $color-grayborder;
 
 }
 
-//Traffic main
-.traffic-options{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style-type: none;
-    width: 280px;
-    margin: 0 auto 15px auto;
-    padding: 0;
-}
-
-.traffic-nav-link{
-    padding: 7px 12px;
-    border-radius: 15px;
-    cursor: pointer;
-    
-}
-
-.active{
-    background-color: $color-highlight;
-    color: $color-white;
-}
 
 //Social main
 .social-card{
@@ -179,14 +94,44 @@ section{
     &::placeholder{
         color: $color-grayborder;
     }
+    &:active{
+        border: none;
+    }
 }
 
 .form-field {
     height: 40px;
+    display: relative;
 }
 
 .form-area {
     height: 150px
+}
+
+//Auto complete for user selection
+
+.autocomplete-items{
+    position: absolute;
+    background-color: $color-grayfill;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 41.7%;
+    max-width: relative;
+    overflow: hidden;
+}
+
+.autocomplete-items div{
+    padding: 10px;
+    border: 1px solid $color-grayborder;
+    cursor: pointer;
+}
+.autocomplete-items div:hover{
+    background-color: $color-main;
+}
+
+.autocomplete-active {
+    background-color: $color-highlight;
+
 }
 
 

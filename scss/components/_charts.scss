@@ -1,12 +1,45 @@
+//Traffic Sectoions
+
+//traffic navigation
+.traffic-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 280px;
+    margin: 0 auto 15px auto;
+    padding: 0;
+}
+
+.traffic-nav-link{
+    padding: 7px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+
+.active{
+    background-color: $color-highlight;
+    color: $color-white;
+}
+
+//Chart Sizes
+
 .widget-container-full{
-    width: 95vw;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     margin: auto;
 }
 
 .widget-container-half{
-    width: 95vw;
+    width: 100%;
+    max-height: 40%;
     margin: auto;
-    @include media-q('small sc'){
-        width: 45vw;
-    } 
 }
+
+canvas {
+    max-width: 100%;
+    
+  }
