@@ -1,0 +1,33 @@
+//Social
+.social-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $color-grayfill;
+    border: 1px solid $color-grayborder;
+    border-radius: 10px;
+    width: 98%;
+    margin: 5px auto 15px auto;
+    padding: 15px 0;
+}
+
+.soical-image{
+    display: flex;
+    height: 75px;
+    width: 75px;
+    margin-left: 15px;
+    background-color: $color-main;
+    border-radius: 50%;
+}
+
+
+.social-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+}
+
+.social-text p {
+    display: inline-block;
+    margin: 0;
+}

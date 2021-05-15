@@ -1,0 +1,74 @@
+//New Members & Recent activity Main
+.members-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+    max-width: 90%;
+    margin: 10px auto;
+    &:nth-of-type(n+2){
+        border-top: 2px solid $color-grayborder;
+    }
+}
+
+.members-text a{
+    color: $color-main;
+}
+
+.widget-container,
+.settings{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+   
+}
+.form-field,
+.form-area {
+    width: 100%;
+    padding: 5px 10px;
+    background-color: $color-grayfill;
+    border:1px solid $color-grayborder;
+    border-radius: 5px;
+    &::placeholder{
+        color: $color-grayborder;
+    }
+    &:active{
+        border: none;
+    }
+}
+
+.form-field {
+    height: 40px;
+    display: relative;
+}
+
+.form-area {
+    height: 150px
+}
+
+//Auto complete for user selection
+
+.autocomplete-items{
+    position: absolute;
+    background-color: $color-grayfill;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 41.7%;
+    max-width: relative;
+    overflow: hidden;
+}
+
+.autocomplete-items div{
+    padding: 10px;
+    border: 1px solid $color-grayborder;
+    cursor: pointer;
+}
+.autocomplete-items div:hover{
+    background-color: $color-main;
+}
+
+.autocomplete-active {
+    background-color: $color-highlight;
+
+}
