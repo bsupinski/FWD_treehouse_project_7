@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -930,14 +940,16 @@ body {
   background-color: #f7f7f7;
   border: 1px solid #cccccc;
   border-radius: 5px;
+  outline: none;
 }
 .form-field::placeholder,
 .form-area::placeholder {
   color: #cccccc;
 }
-.form-field:active,
-.form-area:active {
-  border: none;
+.form-field:focus,
+.form-area:focus {
+  border: 3px solid #81c98f;
+  border-radius: 5px;
 }
 
 .form-field {
@@ -954,7 +966,6 @@ body {
   background-color: #f7f7f7;
   border-radius: 5px;
   cursor: pointer;
-  width: 41.7%;
   max-width: relative;
   overflow: hidden;
 }
@@ -989,7 +1000,7 @@ label {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 input[type=checkbox] {
@@ -1060,7 +1071,8 @@ input:checked[type=checkbox]:before {
 
 .select-selected {
   background-color: #f7f7f7;
-  margin: 22px 0;
+  margin-top: 21px;
+  margin-bottom: 16px;
   border-radius: 7px;
 }
 

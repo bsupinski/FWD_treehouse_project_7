@@ -19,11 +19,13 @@
     background-color: $color-grayfill;
     border:1px solid $color-grayborder;
     border-radius: 5px;
+    outline: none;
     &::placeholder{
         color: $color-grayborder;
     }
-    &:active{
-        border: none;
+    &:focus{
+        border: 3px solid $color-highlight;
+        border-radius: 5px;
     }
 }
 
@@ -33,7 +35,8 @@
 }
 
 .form-area {
-    height: 150px
+    height: 150px;
+
 }
 
 //Auto complete for user selection
@@ -43,7 +46,6 @@
     background-color: $color-grayfill;
     border-radius: 5px;
     cursor: pointer;
-    width: 41.7%;
     max-width: relative;
     overflow: hidden;
 }
@@ -82,7 +84,7 @@ label{
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 15px;;
+    margin-bottom: 18px;
 }
 
 input[type="checkbox"] {
@@ -156,7 +158,8 @@ input:checked[type="checkbox"]:before{
   
   .select-selected {
     background-color: $color-grayfill;
-    margin: 22px 0;
+    margin-top: 21px;
+    margin-bottom: 16px;
     border-radius: 7px;
   }
   

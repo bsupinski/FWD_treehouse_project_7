@@ -14,6 +14,8 @@ send.addEventListener("click",()=>{
     alert(`Please write a message for ${user.value}.`);
     return false;
     }else{
-       alert(`Your message was sent to ${user.value}.`)
+       alert(`Your message was sent to ${user.value}.`);
+       user.value = "";
+       message.value = "";
    }
 })

@@ -37,5 +37,6 @@ cancel.addEventListener("click", e =>{
     localStorage.clear();
     emailToggle.checked = false;
     publicToggle.checked = false;
-    timeZone.selectedIndex = timeZone[0];
+    timeZone.selectedIndex = 0;
+    location.reload();
 })
