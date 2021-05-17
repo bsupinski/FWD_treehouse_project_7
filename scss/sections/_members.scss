@@ -12,6 +12,12 @@
     align-self: flex-start;
 }
 
+.new-members{
+    @include media-q("desktop"){
+        border-right: 1px solid $color-grayborder;
+    }
+}
+
 .members-container{
     display: flex;
     flex-direction: column;
@@ -19,7 +25,7 @@
     align-items: center;
     text-align: center;
     padding: 15px 0;
-    width: 95%;
+    width: 100%;
     margin: 10px auto;
     &:nth-of-type(n+2){
         border-top: 2px solid $color-grayborder;
@@ -27,7 +33,6 @@
     @include media-q("small sc"){
         flex-direction: row;
         justify-content: space-between;
-        width: 95%;
         margin: 0;
     }
 }
@@ -42,6 +47,12 @@
         }
 }
 
+.user-message{
+    @include media-q("desktop"){
+        max-width: 290px;
+    }
+}
+
 
 .members-text a{
     color: $color-main;
@@ -51,7 +62,9 @@
     display: none;
     @include media-q("small sc"){
         display: inline-block;
+        align-self: center;
         color: $color-main;
+        
     }
 }
 

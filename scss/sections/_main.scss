@@ -11,9 +11,15 @@ section {
     border-bottom: 1px solid $color-grayborder;
 }
 
-// .main h2, h3, h4, h5{
-//     margin: 15px 0;
-// }
+.content-wrap{
+    width: 98%;
+    margin: auto;
+    height: 100%;
+}
+
+.main h2, h3, h4, h5{
+    margin: 20px 0;
+}
 
 
 

@@ -3,7 +3,7 @@
 //traffic navigation
 .traffic-nav-wrap{
     @include media-q("small sc"){
-        width: 97%;;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -20,12 +20,7 @@
     justify-content: space-around;
     list-style-type: none;
     width: 280px;
-    margin: 0 auto 15px auto;
-    padding: 0;
-    @include media-q("small sc"){
-        margin: 0;
-    
-    }
+    margin: 15px 0;
 }
 
 .traffic-nav-link{

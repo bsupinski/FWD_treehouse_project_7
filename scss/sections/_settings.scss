@@ -1,11 +1,16 @@
 //Message
+.message{
+    @include media-q("desktop"){
+        border-right: 1px solid $color-grayborder;
+    }
+}
+
 .widget-container,
 .settings{
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 90%;
-   
+    width: 100%;
 }
 .form-field,
 .form-area {
@@ -63,6 +68,9 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+    @include media-q("desktop"){
+        margin-bottom: 23px;
+    }
 }
 
 label{
