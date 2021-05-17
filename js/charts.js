@@ -110,6 +110,7 @@ const mobileData = {
 
 const mobileOptions= {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
         legend: {
             position: "right",
