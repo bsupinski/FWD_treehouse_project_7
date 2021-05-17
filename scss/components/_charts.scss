@@ -1,16 +1,28 @@
 
-
-//Chart Sizes
-
-.widget-container-full{
-    width: 95%;
-    margin: auto;
+.daily-traffic {
+    border-right: 1px solid $color-grayborder;
 }
 
-.widget-container-half{
-    width: 100%;
+
+
+
+//Chart Sizes
+.widget-container-full{
+    width: 95vw;
+    margin: auto;
     @include media-q("small sc"){
-        
+        width: 90vw;
+    }
+}
+
+.widget-container-half {
+    @include media-q("small sc"){
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+        width: 40vw;
+        min-height: 88%;
     }
 }
 

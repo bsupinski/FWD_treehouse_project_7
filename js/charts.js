@@ -52,6 +52,7 @@ let trafficDataMonthly = {
 };
 
 let trafficOptions = {
+    responsive: true,
     aspectRatio: 2.5,
     animation: {
         duration: 0
@@ -82,6 +83,7 @@ const dailyData = {
 
 
 const dailyOptions = {
+    responsive: true,
     scale: {
         y:{
             beginAtZero: true
@@ -107,6 +109,7 @@ const mobileData = {
 };
 
 const mobileOptions= {
+    responsive: true,
     plugins: {
         legend: {
             position: "right",

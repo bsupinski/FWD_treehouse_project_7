@@ -1,74 +1,57 @@
 //New Members & Recent activity Main
+.new-members,
+.recent-activity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-members h3,
+.recent-activity h3{
+    align-self: flex-start;
+}
+
 .members-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 15px 0;
-    max-width: 90%;
+    width: 95%;
     margin: 10px auto;
     &:nth-of-type(n+2){
         border-top: 2px solid $color-grayborder;
     }
+    @include media-q("small sc"){
+        flex-direction: row;
+        justify-content: space-between;
+        width: 95%;
+        margin: 0;
+    }
 }
+.members-text{
+    width: 100%;
+    @include media-q("small sc"){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        margin-left: 10px;
+        }
+}
+
 
 .members-text a{
     color: $color-main;
 }
 
-.widget-container,
-.settings{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 90%;
-   
-}
-.form-field,
-.form-area {
-    width: 100%;
-    padding: 5px 10px;
-    background-color: $color-grayfill;
-    border:1px solid $color-grayborder;
-    border-radius: 5px;
-    &::placeholder{
-        color: $color-grayborder;
-    }
-    &:active{
-        border: none;
+.more-info{
+    display: none;
+    @include media-q("small sc"){
+        display: inline-block;
+        color: $color-main;
     }
 }
 
-.form-field {
-    height: 40px;
-    display: relative;
-}
-
-.form-area {
-    height: 150px
-}
-
-//Auto complete for user selection
-
-.autocomplete-items{
-    position: absolute;
-    background-color: $color-grayfill;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 41.7%;
-    max-width: relative;
-    overflow: hidden;
-}
-
-.autocomplete-items div{
-    padding: 10px;
-    border: 1px solid $color-grayborder;
-    cursor: pointer;
-}
-.autocomplete-items div:hover{
-    background-color: $color-main;
-}
-
-.autocomplete-active {
-    background-color: $color-highlight;
-
-}

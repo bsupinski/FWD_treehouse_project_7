@@ -39,19 +39,19 @@
     .dashboard,
     .alert,
     .traffic,
-    .social-stats{
+    .social-stats,
+    .new-members,
+    .recent-activity,
+    .message,
+    .settings{
         grid-column: 1 / span 2;
     }
     
-    .daily-traffic,
-    .new-members,
-    .message{
+    .daily-traffic {
         grid-column: 1 / span 1;
     }
 
-    .mobile-users,
-    .recent-activity,
-    .settings{
+    .mobile-users {
         grid-column: 2 / span 1;
     }
 }

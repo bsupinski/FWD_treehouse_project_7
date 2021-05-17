@@ -1,7 +1,16 @@
 //Social
+.socials{
+    @include media-q("small sc"){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
 .social-card{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     background-color: $color-grayfill;
     border: 1px solid $color-grayborder;
@@ -9,6 +18,9 @@
     width: 98%;
     margin: 5px auto 15px auto;
     padding: 15px 0;
+    @include media-q("small sc"){
+        width: 32%;
+    }
 }
 
 .soical-image{
@@ -18,6 +30,9 @@
     margin-left: 15px;
     background-color: $color-main;
     border-radius: 50%;
+    @include media-q("small sc"){
+        margin: 0;
+    }
 }
 
 
