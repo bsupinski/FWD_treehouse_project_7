@@ -955,6 +955,7 @@ body {
 .form-field {
   height: 40px;
   display: relative;
+  background-color: #f7f7f7;
 }
 
 .form-area {
@@ -965,6 +966,7 @@ body {
   position: absolute;
   background-color: #f7f7f7;
   border-radius: 5px;
+  margin-top: 40px;
   cursor: pointer;
   max-width: relative;
   overflow: hidden;

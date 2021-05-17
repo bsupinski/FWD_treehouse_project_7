@@ -1,10 +1,14 @@
 let searchable = [
-    "Batman",
-    "Robin",
-    "Joker",
-    "Catwoman",
-    "Bane",
-    "Red Hood"
+    "Kurt Lee",
+    "Ashlee Butler",
+    "Mike Conway",
+    "Victoria Chambers",
+    "Joe Smith",
+    "Richard Grayson",
+    "Jason Todd",
+    "Barbara Gordon",
+    "Bruce Wayne",
+    "Kevin Smith"
 ];
 
 function autocomplete(inp, arr) {
