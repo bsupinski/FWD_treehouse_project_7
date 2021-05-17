@@ -274,7 +274,8 @@
                         </label>
                     </div>
                 </div>
-                <select class="form-field" id="timeZone">
+                <div class="custom-select">
+                    <select class="form-field" id="timeZone">
                     <option disabled selected> Select a Timezone</option>
                     <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
                     <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
@@ -316,7 +317,8 @@
                     <option value="+12:75">(GMT +12:45) Chatham Islands</option>
                     <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
                     <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
-                </select>
+                    </select>
+                </div>
                 <div class="settings-buttons">
                     <button class="button-primary" id="save">Save</button>
                     <button class="button-disabled" id="cancel">Cancel</button>
@@ -330,6 +332,7 @@
     <script src="js/alert_banner.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>
     <script src="js/charts.js"></script>
+    <script src="js/custom_select.js"></script>
     <script src="js/clickEvents.js"></script>
 </body>
 </html>
